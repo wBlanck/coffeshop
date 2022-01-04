@@ -1,0 +1,56 @@
+@use "../util" as *;
+
+.coffee-section {
+  background: url("../../imgs/menu-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding-block: rem(100);
+  &__title {
+    color: #222222;
+    font-size: rem(36);
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    color: #777;
+    font-size: rem(14);
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: rem(100);
+  }
+}
+
+.coffees {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: rem(30);
+  .coffee {
+    background-color: #fff;
+    box-shadow: 0px 10px 30px 0px rgba(182, 136, 52, 0.2);
+    border-radius: 10px;
+    padding: 30px 30px;
+    width: clamp(250px, 100%, 350px);
+    &__headings {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__title {
+      color: #222;
+      font-size: rem(18);
+    }
+    &__price {
+      font-size: rem(18);
+      color: #b68834;
+      font-weight: 600;
+    }
+    &__desc {
+      font-size: rem(14);
+      font-weight: 300;
+      color: #777;
+      text-align: start;
+      margin: 0;
+    }
+  }
+}

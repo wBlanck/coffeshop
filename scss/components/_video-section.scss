@@ -1,6 +1,7 @@
 @use "../util" as *;
 
 .video-section {
+  padding-block: rem(100);
   .container {
     display: flex;
     justify-content: space-between;
