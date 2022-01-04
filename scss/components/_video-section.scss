@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15vmax;
+    gap: 6vmax;
 
     @include breakpoint-down("large") {
       flex-direction: column;
