@@ -5,11 +5,11 @@ $breakpoints-up: (
   "xlarge": "87.5em",
 );
 
-// 500px, 650px, 1399px
+// 500px, 650px, 1000px
 $breakpoints-down: (
   "small": "31.25em",
   "medium": "40.625em",
-  "large": "87.4375em",
+  "large": "62.5em",
 );
 
 @mixin breakpoint($size) {

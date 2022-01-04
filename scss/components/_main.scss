@@ -4,6 +4,7 @@
   height: 100%;
   display: grid;
   place-content: center;
+  margin-bottom: 75px;
   &__content {
     max-width: 600px;
     width: 100%;
@@ -56,7 +57,7 @@
   .store-info {
     display: none;
   }
-  .main {
+  /* .main {
     height: calc(100vh + 300px);
-  }
+  } */
 }

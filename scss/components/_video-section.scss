@@ -1,0 +1,82 @@
+@use "../util" as *;
+
+.video-section {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15vmax;
+
+    @include breakpoint-down("large") {
+      flex-direction: column;
+      gap: rem(75);
+    }
+  }
+  .video {
+    flex: 1;
+    position: relative;
+    max-height: 350px;
+    width: min(570px, 100%);
+
+    @include breakpoint-down("large") {
+      width: min(720px, 100%);
+    }
+
+    > img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    &__overlay {
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
+
+  &__text-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    @include breakpoint-down("large") {
+      align-items: center;
+      text-align: center;
+    }
+    &__subtitle {
+      color: #b68834;
+      font-size: rem(12);
+      text-transform: uppercase;
+      font-weight: 300;
+      margin-bottom: rem(5);
+      letter-spacing: rem(2);
+    }
+    &__title {
+      color: #222222;
+      font-size: rem(36);
+      /* max-width: 350px; */
+      margin-bottom: rem(25);
+    }
+    strong {
+      color: #000;
+      font-size: rem(14);
+      font-weight: 400;
+    }
+    &__desc {
+      color: #777777;
+      font-size: rem(14);
+      margin-bottom: rem(25);
+    }
+    &__signature {
+    }
+  }
+}
