@@ -139,6 +139,7 @@ ul {
   border: 1px solid #fff;
   background: transparent;
   color: #fff;
+  transition: 0.3s;
 }
 
 @media screen and (max-width: 500px) {
@@ -158,3 +159,13 @@ ul {
     height: calc(100vh + 300px);
   }
 }
+
+/* @keyframes fadeDown {
+  50% {
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+ */
