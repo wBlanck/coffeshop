@@ -1,3 +1,12 @@
 :root {
-	--font-body: Arial, sans-serif;
+  --step--2: clamp(2.13rem, 2rem + 0.53vw, 2.4rem);
+  --step--1: clamp(2.55rem, 2.35rem + 0.87vw, 3rem);
+  --step-0: clamp(3.06rem, 2.75rem + 1.33vw, 3.75rem);
+  --step-1: clamp(3.68rem, 3.21rem + 1.96vw, 4.69rem);
+  --step-2: clamp(4.41rem, 3.75rem + 2.81vw, 5.86rem);
+  --step-3: clamp(5.29rem, 4.37rem + 3.94vw, 7.32rem);
+  --step-4: clamp(6.35rem, 5.08rem + 5.44vw, 9.15rem);
+  --step-5: clamp(7.62rem, 5.88rem + 7.42vw, 11.44rem);
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");

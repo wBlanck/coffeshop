@@ -1,0 +1,67 @@
+@use "../util" as *;
+
+.header {
+  width: 100%;
+  position: fixed;
+  padding-top: rem(15);
+}
+.store-info {
+  display: flex;
+
+  @include breakpoint-down("medium") {
+    display: none;
+  }
+
+  &__link {
+    font-size: rem(14);
+    font-weight: 300;
+  }
+  &__link + &__link {
+    margin-left: rem(25);
+  }
+  &__link:first-child {
+    margin-left: auto;
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    display: grid;
+    place-content: center;
+  }
+  &__links {
+    display: flex;
+
+    @include breakpoint-down("medium") {
+      display: none;
+    }
+  }
+  &__link {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: rem(12);
+  }
+  &__item + &__item {
+    margin-left: rem(25);
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+
+    @include breakpoint-down("medium") {
+      display: flex;
+      flex-direction: column;
+    }
+    .bar {
+      width: rem(25);
+      height: rem(3);
+      border-radius: rem(3);
+      background-color: #fff;
+    }
+    .bar + .bar {
+      margin-top: rem(5);
+    }
+  }
+}

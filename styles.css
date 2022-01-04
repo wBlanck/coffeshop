@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+:root {
+  --step--2: clamp(2.13rem, 2rem + 0.53vw, 2.4rem);
+  --step--1: clamp(2.55rem, 2.35rem + 0.87vw, 3rem);
+  --step-0: clamp(3.06rem, 2.75rem + 1.33vw, 3.75rem);
+  --step-1: clamp(3.68rem, 3.21rem + 1.96vw, 4.69rem);
+  --step-2: clamp(4.41rem, 3.75rem + 2.81vw, 5.86rem);
+  --step-3: clamp(5.29rem, 4.37rem + 3.94vw, 7.32rem);
+  --step-4: clamp(6.35rem, 5.08rem + 5.44vw, 9.15rem);
+  --step-5: clamp(7.62rem, 5.88rem + 7.42vw, 11.44rem);
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* 40,625 */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  background: url("https://preview.colorlib.com/theme/coffee/img/xheader-bg.jpg.pagespeed.ic.YfGrEbXWQM.webp");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.container {
+  width: clamp(16rem, 90vw, 75rem);
+  margin-inline: auto;
+}
+@media (min-width: 71.875em) {
+  .container {
+    padding: 0;
+    transform: translate(0, 0);
+  }
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  padding-top: 0.9375rem;
+}
+
+.store-info {
+  display: flex;
+}
+@media (max-width: 40.625em) {
+  .store-info {
+    display: none;
+  }
+}
+.store-info__link {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+.store-info__link + .store-info__link {
+  margin-left: 1.5625rem;
+}
+.store-info__link:first-child {
+  margin-left: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav .logo {
+  display: grid;
+  place-content: center;
+}
+.nav__links {
+  display: flex;
+}
+@media (max-width: 40.625em) {
+  .nav__links {
+    display: none;
+  }
+}
+.nav__link {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 0.75rem;
+}
+.nav__item + .nav__item {
+  margin-left: 1.5625rem;
+}
+.nav .hamburger {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 40.625em) {
+  .nav .hamburger {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.nav .hamburger .bar {
+  width: 1.5625rem;
+  height: 0.1875rem;
+  border-radius: 0.1875rem;
+  background-color: #fff;
+}
+.nav .hamburger .bar + .bar {
+  margin-top: 0.3125rem;
+}
+
+.main {
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+.main__content {
+  max-width: 600px;
+  width: 100%;
+  display: grid;
+  margin-top: -150px;
+}
+@media (max-width: 40.625em) {
+  .main__content {
+    text-align: center;
+  }
+}
+.main__subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@media (max-width: 40.625em) {
+  .main__subtitle {
+    width: 100%;
+  }
+}
+.main__title {
+  font-size: var(--step-0);
+  /* 15px */
+  margin-block: max(15px, 3.5vmin);
+  line-height: 1.2em;
+}
+.main__btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 40px;
+  border-radius: 50px;
+  max-width: 150px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.main__btn:hover {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  transition: 0.3s;
+}
+@media (max-width: 40.625em) {
+  .main__btn {
+    margin: auto;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1000px) {
+  .store-info {
+    display: none;
+  }
+
+  .main {
+    height: calc(100vh + 300px);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

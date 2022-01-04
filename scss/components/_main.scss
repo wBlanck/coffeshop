@@ -1,0 +1,62 @@
+@use "../util" as *;
+
+.main {
+  height: 100%;
+  display: grid;
+  place-content: center;
+  &__content {
+    max-width: 600px;
+    width: 100%;
+    display: grid;
+    margin-top: -150px;
+    @include breakpoint-down("medium") {
+      text-align: center;
+    }
+  }
+  &__subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include breakpoint-down("medium") {
+      width: 100%;
+    }
+  }
+  &__title {
+    font-size: var(--step-0);
+    /* 15px */
+    margin-block: max(15px, 3.5vmin);
+    line-height: 1.2em;
+  }
+  &__btn {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 7px 40px;
+    border-radius: 50px;
+    max-width: 150px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    border: 1px solid white;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    @include breakpoint-down("medium") {
+      margin: auto;
+    }
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1000px) {
+  .store-info {
+    display: none;
+  }
+  .main {
+    height: calc(100vh + 300px);
+  }
+}
