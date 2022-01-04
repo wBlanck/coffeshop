@@ -1,3 +1,4 @@
+// animatecss function
 const animateCSS = (element, animation, prefix = "animate__") =>
   // We create a Promise and return it
   new Promise((resolve, reject) => {
@@ -17,9 +18,25 @@ const animateCSS = (element, animation, prefix = "animate__") =>
   });
 
 const btn = document.querySelector(".main__btn");
+const header = document.querySelector(".header");
+const videoSection = document.querySelector(".video-section");
+const storeInfo = document.querySelector(".store-info");
+
+// adds background to navbar when scrolling down
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      header.classList.add("onScroll");
+      storeInfo.classList.add("hide");
+    } else {
+      header.classList.remove("onScroll");
+      storeInfo.classList.remove("hide");
+    }
+  });
+});
+
+observer.observe(videoSection);
 
 btn.addEventListener("click", () => {
-  animateCSS(".main__btn", "bounceIn").then((message) => {
-    console.log(message);
-  });
+  animateCSS(".main__btn", "bounceIn").then((message) => {});
 });

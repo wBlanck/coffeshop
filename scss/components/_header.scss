@@ -1,13 +1,21 @@
 @use "../util" as *;
-
+.onScroll {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding-bottom: rem(15);
+}
+.hide {
+  display: none !important;
+}
 .header {
   width: 100%;
   position: fixed;
   padding-top: rem(15);
+  z-index: 10;
+  transition: all 0.5s;
 }
 .store-info {
   display: flex;
-
+  margin: 0;
   @include breakpoint-down("medium") {
     display: none;
   }

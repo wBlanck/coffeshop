@@ -73,14 +73,26 @@ body {
   }
 }
 
+.onScroll {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding-bottom: 0.9375rem;
+}
+
+.hide {
+  display: none !important;
+}
+
 .header {
   width: 100%;
   position: fixed;
   padding-top: 0.9375rem;
+  z-index: 10;
+  transition: all 0.5s;
 }
 
 .store-info {
   display: flex;
+  margin: 0;
 }
 @media (max-width: 40.625em) {
   .store-info {
@@ -147,13 +159,13 @@ body {
   height: 100%;
   display: grid;
   place-content: center;
-  margin-bottom: 75px;
+  margin-bottom: 4.6875rem;
 }
 .main__content {
-  max-width: 600px;
+  max-width: 37.5rem;
   width: 100%;
   display: grid;
-  margin-top: -150px;
+  margin-top: -9.375rem;
 }
 @media (max-width: 40.625em) {
   .main__content {
@@ -161,7 +173,7 @@ body {
   }
 }
 .main__subtitle {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -178,11 +190,11 @@ body {
 }
 .main__btn {
   display: inline-block;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
-  padding: 7px 40px;
-  border-radius: 50px;
-  max-width: 150px;
+  padding: 0.4375rem 2.5rem;
+  border-radius: 3.125rem;
+  max-width: 9.375rem;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   border: 1px solid white;
