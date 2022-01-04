@@ -361,7 +361,7 @@ body {
 }
 
 .coffee-section {
-  background: url(../../imgs/menu-bg.jpg);
+  background: url("imgs/menu-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -547,7 +547,7 @@ body {
 .footer {
   padding-top: 12.5rem;
   padding-bottom: 3.125rem;
-  background: url(../../imgs/footer-bg.jpg);
+  background: url("imgs/footer-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
