@@ -1,0 +1,59 @@
+@use "../util" as *;
+
+.close-btn {
+  position: absolute;
+  right: rem(50);
+  top: rem(50);
+  display: inline-block;
+  margin-left: auto;
+  cursor: pointer;
+  height: rem(30);
+  width: rem(30);
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #fff;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.mobile-nav {
+  transition: transform 0.5s ease;
+  transform: translateX(-100%);
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 69;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  &__links {
+  }
+  &__item {
+    &:hover {
+      background-color: red;
+    }
+  }
+  &__item + &__item {
+    margin-top: rem(25);
+  }
+  &__link {
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: rem(16);
+  }
+}

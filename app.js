@@ -21,7 +21,9 @@ const btn = document.querySelector(".main__btn");
 const header = document.querySelector(".header");
 const videoSection = document.querySelector(".video-section");
 const storeInfo = document.querySelector(".store-info");
-
+const hamburger = document.querySelector(".hamburger");
+const mobileNav = document.querySelector(".mobile-nav");
+const closeMobileNav = document.querySelector(".close-btn");
 // adds background to navbar when scrolling down
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -39,4 +41,11 @@ observer.observe(videoSection);
 
 btn.addEventListener("click", () => {
   animateCSS(".main__btn", "bounceIn").then((message) => {});
+});
+
+hamburger.addEventListener("click", () => {
+  mobileNav.style.transform = "translateX(0)";
+});
+closeMobileNav.addEventListener("click", () => {
+  mobileNav.style.transform = "translateX(-100%)";
 });
