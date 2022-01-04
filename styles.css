@@ -28,6 +28,7 @@ body {
 
 ul {
   list-style-type: none;
+  margin: 0;
 }
 
 img {
@@ -100,7 +101,7 @@ body {
   }
 }
 .store-info__link {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 300;
 }
 .store-info__link + .store-info__link {
@@ -131,6 +132,7 @@ body {
   text-transform: uppercase;
   color: #fff;
   font-size: 0.75rem;
+  font-weight: 600;
 }
 .nav__item + .nav__item {
   margin-left: 1.5625rem;

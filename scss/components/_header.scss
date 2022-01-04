@@ -21,7 +21,7 @@
   }
 
   &__link {
-    font-size: rem(14);
+    font-size: rem(12);
     font-weight: 300;
   }
   &__link + &__link {
@@ -50,6 +50,7 @@
     text-transform: uppercase;
     color: #fff;
     font-size: rem(12);
+    font-weight: 600;
   }
   &__item + &__item {
     margin-left: rem(25);
