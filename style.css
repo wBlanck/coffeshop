@@ -153,3 +153,8 @@ ul {
     margin: auto;
   }
 }
+@media only screen and (orientation: landscape) and (max-width: 1000px) {
+  .main {
+    height: calc(100vh + 300px);
+  }
+}
