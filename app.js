@@ -19,7 +19,7 @@ const animateCSS = (element, animation, prefix = "animate__") =>
 
 const btn = document.querySelector(".main__btn");
 const header = document.querySelector(".header");
-const videoSection = document.querySelector(".video-section");
+const heroSubTitle = document.querySelector(".main__subtitle");
 const storeInfo = document.querySelector(".store-info");
 const hamburger = document.querySelector(".hamburger");
 const mobileNav = document.querySelector(".mobile-nav");
@@ -28,16 +28,16 @@ const closeMobileNav = document.querySelector(".close-btn");
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      header.classList.add("onScroll");
-      storeInfo.classList.add("hide");
-    } else {
       header.classList.remove("onScroll");
       storeInfo.classList.remove("hide");
+    } else {
+      header.classList.add("onScroll");
+      storeInfo.classList.add("hide");
     }
   });
 });
 
-observer.observe(videoSection);
+observer.observe(heroSubTitle);
 
 btn.addEventListener("click", () => {
   animateCSS(".main__btn", "bounceIn").then((message) => {});
