@@ -71,12 +71,16 @@
 }
 .social-media {
   width: 15%;
+  @include breakpoint-down("medium-700") {
+    width: 30%;
+  }
   &__title {
   }
   &__desc {
   }
   .socials {
     display: flex;
+
     &__item {
     }
     &__link {

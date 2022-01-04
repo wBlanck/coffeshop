@@ -609,6 +609,11 @@ body {
 .social-media {
   width: 15%;
 }
+@media (max-width: 44em) {
+  .social-media {
+    width: 30%;
+  }
+}
 .social-media .socials {
   display: flex;
 }
