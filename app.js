@@ -16,10 +16,10 @@ const animateCSS = (element, animation, prefix = "animate__") =>
     node.addEventListener("animationend", handleAnimationEnd, { once: true });
   });
 
-const btn = document.querySelector(".btn");
+const btn = document.querySelector(".main__btn");
 
 btn.addEventListener("click", () => {
-  animateCSS(".btn", "bounceIn").then((message) => {
+  animateCSS(".main__btn", "bounceIn").then((message) => {
     console.log(message);
   });
 });
