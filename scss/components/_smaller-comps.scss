@@ -1,0 +1,77 @@
+@use "../util" as *;
+
+/* ADD HEADER BACKGROUND ON SCROLL */
+.onScroll {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding-bottom: rem(15);
+}
+
+/* HAMBURGER BUTTON */
+.hamburger {
+  display: none;
+  cursor: pointer;
+
+  @include breakpoint-down("medium") {
+    display: flex;
+    flex-direction: column;
+  }
+  .bar {
+    width: rem(25);
+    height: rem(3);
+    border-radius: rem(3);
+    background-color: #fff;
+  }
+  .bar + .bar {
+    margin-top: rem(5);
+  }
+}
+
+/*  SCROLL TO TOP BUTTON  */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  background-color: #b68834;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+
+  i {
+    font-size: rem(20);
+    color: white;
+  }
+}
+
+/* MOBILE NAV CLOSE BUTTON */
+
+.close-btn {
+  position: absolute;
+  right: rem(50);
+  top: rem(50);
+  display: inline-block;
+  margin-left: auto;
+  cursor: pointer;
+  height: rem(30);
+  width: rem(30);
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #fff;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}

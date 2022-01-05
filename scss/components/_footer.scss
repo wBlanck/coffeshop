@@ -29,7 +29,10 @@
 }
 .about {
   width: 35%;
-  min-width: 350px;
+  /* min-width: 330px; */
+  @include breakpoint-down("medium-700") {
+    width: min(500px, 100%);
+  }
   &__title {
   }
   &__desc {
@@ -39,7 +42,10 @@
 }
 .newsletter {
   width: 35%;
-  min-width: 350px;
+  /* min-width: 330px; */
+  @include breakpoint-down("medium-700") {
+    width: min(500px, 100%);
+  }
   &__title {
   }
   &__desc {
@@ -57,7 +63,7 @@
       border: none;
     }
     button {
-      width: 10%;
+      width: 40px;
       background-color: #b68834;
       color: #fff;
       border: none;
@@ -70,9 +76,9 @@
   }
 }
 .social-media {
-  width: 15%;
+  width: 18%;
   @include breakpoint-down("medium-700") {
-    width: 30%;
+    width: min(500px, 100%);
   }
   &__title {
   }

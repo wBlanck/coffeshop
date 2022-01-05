@@ -1,8 +1,5 @@
 @use "../util" as *;
-.onScroll {
-  background-color: rgba(0, 0, 0, 0.85);
-  padding-bottom: rem(15);
-}
+
 .hide {
   display: none !important;
 }
@@ -58,23 +55,5 @@
   }
   &__item + &__item {
     margin-left: rem(25);
-  }
-  .hamburger {
-    display: none;
-    cursor: pointer;
-
-    @include breakpoint-down("medium") {
-      display: flex;
-      flex-direction: column;
-    }
-    .bar {
-      width: rem(25);
-      height: rem(3);
-      border-radius: rem(3);
-      background-color: #fff;
-    }
-    .bar + .bar {
-      margin-top: rem(5);
-    }
   }
 }

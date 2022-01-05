@@ -10,7 +10,7 @@
   &__title {
     color: #222222;
     font-size: rem(36);
-    margin-bottom: 10px;
+    margin-bottom: clamp(20px, 5vw, 25px);
   }
   &__subtitle {
     color: #777;

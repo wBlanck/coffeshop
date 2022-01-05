@@ -75,11 +75,6 @@ body {
   }
 }
 
-.onScroll {
-  background-color: rgba(0, 0, 0, 0.85);
-  padding-bottom: 0.9375rem;
-}
-
 .hide {
   display: none !important;
 }
@@ -141,25 +136,6 @@ body {
 .nav__item + .nav__item {
   margin-left: 1.5625rem;
 }
-.nav .hamburger {
-  display: none;
-  cursor: pointer;
-}
-@media (max-width: 40.625em) {
-  .nav .hamburger {
-    display: flex;
-    flex-direction: column;
-  }
-}
-.nav .hamburger .bar {
-  width: 1.5625rem;
-  height: 0.1875rem;
-  border-radius: 0.1875rem;
-  background-color: #fff;
-}
-.nav .hamburger .bar + .bar {
-  margin-top: 0.3125rem;
-}
 
 .main {
   height: 100%;
@@ -179,8 +155,8 @@ body {
   }
 }
 .main__subtitle {
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 500;
   text-transform: uppercase;
 }
 @media (max-width: 40.625em) {
@@ -190,8 +166,8 @@ body {
 }
 .main__title {
   font-size: var(--step-0);
-  /* 15px */
   margin-block: max(15px, 3.5vmin);
+  margin-top: 0;
   line-height: 1.2em;
 }
 .main__btn {
@@ -308,32 +284,6 @@ body {
   font-size: 0.875rem;
   margin-bottom: 1.5625rem;
 }
-.close-btn {
-  position: absolute;
-  right: 3.125rem;
-  top: 3.125rem;
-  display: inline-block;
-  margin-left: auto;
-  cursor: pointer;
-  height: 1.875rem;
-  width: 1.875rem;
-}
-.close-btn:before, .close-btn:after {
-  content: "";
-  position: absolute;
-  top: 18px;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background-color: #fff;
-}
-.close-btn:before {
-  transform: rotate(45deg);
-}
-.close-btn:after {
-  transform: rotate(-45deg);
-}
-
 .mobile-nav {
   transition: transform 0.5s ease;
   transform: translateX(-100%);
@@ -371,7 +321,7 @@ body {
 .coffee-section__title {
   color: #222222;
   font-size: 2.25rem;
-  margin-bottom: 10px;
+  margin-bottom: clamp(20px, 5vw, 25px);
 }
 .coffee-section__subtitle {
   color: #777;
@@ -422,7 +372,7 @@ body {
 .gallery-section__title {
   color: #222222;
   font-size: 2.25rem;
-  margin-bottom: 10px;
+  margin-bottom: clamp(20px, 5vw, 25px);
 }
 .gallery-section__subtitle {
   color: #777;
@@ -479,7 +429,7 @@ body {
 .blog-section__title {
   color: #222222;
   font-size: 2.25rem;
-  margin-bottom: 10px;
+  margin-bottom: clamp(20px, 5vw, 25px);
 }
 .blog-section__subtitle {
   color: #777;
@@ -532,11 +482,13 @@ body {
 .posts .post__title {
   color: #222;
   font-size: 1.125rem;
+  cursor: pointer;
 }
 .posts .post__desc {
   color: #777777;
   font-size: 0.875rem;
   width: 90%;
+  cursor: pointer;
 }
 .posts .post__date {
   color: #222;
@@ -576,11 +528,21 @@ body {
 
 .about {
   width: 35%;
-  min-width: 350px;
+  /* min-width: 330px; */
+}
+@media (max-width: 44em) {
+  .about {
+    width: min(500px, 100%);
+  }
 }
 .newsletter {
   width: 35%;
-  min-width: 350px;
+  /* min-width: 330px; */
+}
+@media (max-width: 44em) {
+  .newsletter {
+    width: min(500px, 100%);
+  }
 }
 .newsletter__form {
   display: flex;
@@ -596,7 +558,7 @@ body {
   border: none;
 }
 .newsletter__form button {
-  width: 10%;
+  width: 40px;
   background-color: #b68834;
   color: #fff;
   border: none;
@@ -607,11 +569,11 @@ body {
 }
 
 .social-media {
-  width: 15%;
+  width: 18%;
 }
 @media (max-width: 44em) {
   .social-media {
-    width: 30%;
+    width: min(500px, 100%);
   }
 }
 .social-media .socials {
@@ -627,6 +589,78 @@ body {
 
 .socials__item + .socials__item {
   margin-left: 1.5625rem;
+}
+
+/* ADD HEADER BACKGROUND ON SCROLL */
+.onScroll {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding-bottom: 0.9375rem;
+}
+
+/* HAMBURGER BUTTON */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 40.625em) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.hamburger .bar {
+  width: 1.5625rem;
+  height: 0.1875rem;
+  border-radius: 0.1875rem;
+  background-color: #fff;
+}
+.hamburger .bar + .bar {
+  margin-top: 0.3125rem;
+}
+
+/*  SCROLL TO TOP BUTTON  */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  background-color: #b68834;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+}
+.scroll-to-top i {
+  font-size: 1.25rem;
+  color: white;
+}
+
+/* MOBILE NAV CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  right: 3.125rem;
+  top: 3.125rem;
+  display: inline-block;
+  margin-left: auto;
+  cursor: pointer;
+  height: 1.875rem;
+  width: 1.875rem;
+}
+.close-btn:before, .close-btn:after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #fff;
+}
+.close-btn:before {
+  transform: rotate(45deg);
+}
+.close-btn:after {
+  transform: rotate(-45deg);
 }
 
 /*# sourceMappingURL=styles.css.map */
