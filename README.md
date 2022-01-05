@@ -5,3 +5,4 @@ practicing with
 - min(), max(), clamp() etc
 - animate.css lib
 - scss
+- IntersectionObserver
