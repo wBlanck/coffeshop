@@ -64,6 +64,11 @@ body {
   background-repeat: no-repeat;
   color: #fff;
 }
+@media (max-width: 62.5em) {
+  body {
+    background-position: 27% 75%;
+  }
+}
 
 .container {
   width: clamp(16rem, 90vw, 75rem);
@@ -293,9 +298,6 @@ body {
   display: grid;
   place-content: center;
   text-align: center;
-}
-.mobile-nav__item:hover {
-  background-color: red;
 }
 .mobile-nav__item + .mobile-nav__item {
   margin-top: 1.5625rem;

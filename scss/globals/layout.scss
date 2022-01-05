@@ -7,6 +7,9 @@ body {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   color: #fff;
+  @include breakpoint-down("large") {
+    background-position: 27% 75%;
+  }
 }
 
 .container {
