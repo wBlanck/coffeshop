@@ -24,15 +24,19 @@ const storeInfo = document.querySelector(".store-info");
 const hamburger = document.querySelector(".hamburger");
 const mobileNav = document.querySelector(".mobile-nav");
 const closeMobileNav = document.querySelector(".close-btn");
+const scrollToTopBtn = document.querySelector(".scroll-to-top");
+
 // adds background to navbar when scrolling down
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       header.classList.remove("onScroll");
       storeInfo.classList.remove("hide");
+      scrollToTopBtn.classList.remove("show");
     } else {
       header.classList.add("onScroll");
       storeInfo.classList.add("hide");
+      scrollToTopBtn.classList.add("show");
     }
   });
 });

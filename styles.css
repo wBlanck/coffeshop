@@ -13,6 +13,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -73,10 +74,6 @@ body {
     padding: 0;
     transform: translate(0, 0);
   }
-}
-
-.hide {
-  display: none !important;
 }
 
 .header {
@@ -591,6 +588,17 @@ body {
   margin-left: 1.5625rem;
 }
 
+/* SHOW ELEMENT   */
+.show {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* HIDE ELEMENT */
+.hide {
+  display: none !important;
+}
+
 /* ADD HEADER BACKGROUND ON SCROLL */
 .onScroll {
   background-color: rgba(0, 0, 0, 0.85);
@@ -630,6 +638,9 @@ body {
   display: grid;
   place-content: center;
   border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
 }
 .scroll-to-top i {
   font-size: 1.25rem;

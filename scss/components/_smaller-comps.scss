@@ -1,5 +1,16 @@
 @use "../util" as *;
 
+/* SHOW ELEMENT   */
+.show {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* HIDE ELEMENT */
+.hide {
+  display: none !important;
+}
+
 /* ADD HEADER BACKGROUND ON SCROLL */
 .onScroll {
   background-color: rgba(0, 0, 0, 0.85);
@@ -39,7 +50,9 @@
   display: grid;
   place-content: center;
   border-radius: 50%;
-
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
   i {
     font-size: rem(20);
     color: white;
