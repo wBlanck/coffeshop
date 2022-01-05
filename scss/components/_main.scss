@@ -16,7 +16,7 @@
   }
   &__subtitle {
     font-size: rem(12);
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     @include breakpoint-down("medium") {
       width: 100%;
